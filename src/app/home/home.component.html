@@ -1,0 +1,9 @@
+<!-- <H1>This is home</H1> -->
+
+<form #f1="ngForm">
+    <input type="text" name="nom" #nom="ngModel" ngModel required />
+    <div *ngIf="nom.errors && nom.control.touched">
+        <small style="color: red;" *ngIf="nom.errors['required']"> Nom est oblg </small>
+    </div>
+    {{nom.value}}
+</form>
